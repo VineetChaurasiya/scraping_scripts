@@ -53,18 +53,6 @@ def login_to_website():
     captcha_text = get_captcha_text(location, size)
     captcha.send_keys(captcha_text)
     driver.find_element_by_xpath('//*[@id="btnLogin"]').click()
-    select_options(driver)
-
-    
-def select_options(driver):
-    driver.find_element_by_xpath('//*[@id="mnuSearchTypen1"]/td/table/tbody/tr/td/a').click()
-    driver.find_element_by_xpath('//*[@id="rblDocType_0"]').click()
-    district_select_elem = driver.find_element_by_xpath('//*[@id="ddldistrictfordoc"]')
-    district_select = Select(district_select_elem)
-    district_options = district_select.options
-    for index in range(0, len(district_options)): 
-        district_select.select_by_index(index)
-        
-    
-    
+  
+      
 login_to_website()
