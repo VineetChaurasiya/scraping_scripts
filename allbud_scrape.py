@@ -1,3 +1,8 @@
+'''
+Author: Vineet
+Date: 3 Dec 2017
+This script scrapes all the strain data from allbud.com and stores in a JSON
+'''
 import requests
 from bs4 import BeautifulSoup
 import time
